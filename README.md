@@ -1,1 +1,1 @@
-# SO-CSC
+# Spiraling Odessy: Character Sheet Creator
