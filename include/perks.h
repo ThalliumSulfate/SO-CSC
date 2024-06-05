@@ -21,6 +21,7 @@ class Perks
         static Perk FlameHorns;
         static Perk EarthHorns;
         static Perk ThunderHorns;
+        static std::list<Perk> Horns;
         static Perk MagicalInitiation;
         static Perk ArcaneEducation;
         //nyx perks

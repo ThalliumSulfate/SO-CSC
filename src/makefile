@@ -13,11 +13,11 @@ PKLFLAGS:=$(shell pkg-config --libs $(PKLIBS))
 
 EXEC=app
 
-SRCS=main.c human.c perk.c race.c perks.c
+SRCS=main.c app.c perk.c perks.c race.c races.c character.c
 _OBJS=$(SRCS:.c=.o)
 OBJS=$(patsubst %,./$(ODIR)/%,$(_OBJS))
 
-_DEPS=library.h human.h race.h perk.h races.h perks.h
+_DEPS=library.h app.h perk.h perks.h race.h races.h character.h
 DEPS=$(patsubst %,$(IDIR)/%,$(_DEPS))
 
 all: $(EXEC)

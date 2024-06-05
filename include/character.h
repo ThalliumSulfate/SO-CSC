@@ -7,10 +7,12 @@ class Character
 {
     public:
         Character();
+        Character(std::string name, Race race);
 
         ~Character();
     private:
-        Race race;
+        std::string Name;
+        Race cRace;
 };
 
 #endif

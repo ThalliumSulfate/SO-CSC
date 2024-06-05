@@ -1,17 +1,8 @@
-#include <race.h>
+#include <app.h>
 
 int main ()
 {
-    Human human;
+    App app;
 
-    std::list<Perk>::iterator it;
-
-    std::list<Perk> Features = human.GetFeatures();
-
-    std::cout << "mylist contains:";
-    for(it=Features.begin(); it!=Features.end(); it++)
-        std::cout << ' ' << (*it).GetName();
-    std::cout << '\n';
-
-    return 0;
+    app.Program();
 }

@@ -19,6 +19,7 @@ Perk Perks::FlameHorns = Perk("Flame Horns", "Your Horns grant you an affinity i
 Perk Perks::EarthHorns = Perk("Earth Horns", "Your Horns grant you an affinity in earth magic, you can learn earth spells and can cast earth magic without losing sanity.");
 Perk Perks::ThunderHorns = Perk("Thunder Horns", "Your Horns grant you an affinity in thunder magic, you can learn thunder spells and can cast thunder magic without losing sanity.");
 Perk Perks::MagicalInitiation = Perk("Magical Initiation", "You know 2 cantrips of your choice, as well as 2 level 1 or level 2 spells of your choice, and learning new spells takes only half the time required.");
+std::list<Perk> Perks::Horns = {MindHorns, SoulHorns, CryoHorns, AquaHorns, FlameHorns, EarthHorns, ThunderHorns};
 Perk Perks::ArcaneEducation = Perk("Arcane Education", "You start with proficiency in the Occult skill.");
 //nyx perks
 Perk Perks::NightVision = Perk("Night Vision", "You are able to see in the darkness up to 10 meters, seeing things in shades of gray instead of colors.");
