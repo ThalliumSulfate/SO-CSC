@@ -9,6 +9,11 @@ class Races
         static Race Nyx;
         static Race Evelet;
         static Race Lites;
+        static Race Mockrc;
+        static Race Demon;
+        static Race Constructs;
+        static Race Chlorfolk;
+        static Race Voidtouched;
 
         static std::list<Race> InitRaces();
         static void SelectHorns(Race &magin);

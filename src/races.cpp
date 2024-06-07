@@ -8,6 +8,11 @@ Race Races::Magin = Race("Magin", "Medium", "Humanoid", 40, 30);
 Race Races::Nyx = Race("Nyx", "Medium", "Humanoid", 40, 30);
 Race Races::Evelet = Race("Evelet", "Small", "Humanoid", 20, 50);
 Race Races::Lites = Race("Lites", "Small", "Humanoid", 40, 40);
+Race Races::Mockrc = Race("Mockrc", "Medium", "Humanoid", 50, 30);
+Race Races::Demon = Race("Demon", "Medium", "Demonic", 60, 40);
+Race Races::Constructs = Race("Constructs", "Any", "Artificial", 0, 40);
+Race Races::Chlorfolk = Race("Chlorfolk", "Medium", "Plantoid", 30, 40);
+Race Races::Voidtouched = Race("Voidtouched", "Medium", "Humanoid", 0, 40);
 #pragma endregion
 
 std::list<Race> Races::InitRaces()
@@ -54,7 +59,33 @@ std::list<Race> Races::InitRaces()
 
     Lites.SetFeatures({Perks::SmallButTough, Perks::SizeNimbleness});
     initializedRaces.insert(it, Lites);
+    //Mockrc init
+    Mockrc.SetDescription("Called Mockrc by the government of Evermore, they were the former denizens of the town of Rikmanster, “blessed” by the Jester, they became immortal beings able to shapeshift into any humanoid creature or object they desired, including weapons or wings made by their own flesh, the cost was losing their previous identities, with any proof of who they were magically banishing from the world. Now they became masters of disguise, espionage and subterfuge, making Evermore´s Nobles fear to be replaced by one of them.");
+    Mockrc.SetAppearance("Mockrc are however unable to mimic magic, and magic itself is forbidden to them, causing pain whenever they try to learn it or utilize it, and speaking about pain, every transformation they suffer is extremely painful, reason for them to dislike changing their appearance too often, relying on having a “main” form to stick with most of the time.");
 
+    Mockrc.SetFeatures({Perks::MockrcAdaptability, Perks::ShapeshiftingProwess, Perks::FleshWeaponry});
+    initializedRaces.insert(it, Mockrc);
+    //Demon init
+    Demon.SetDescription("Demons are corrupted creatures, either living or undead that are submitted to the will of the Lung. Some of them now free of its control and having their own free will, others like the Imps, have free will of their own but are still under the influence of the Lung. Living Demons are stronger than undead ones");
+    Demon.SetAppearance("The appearance of demons are similar to the Magin, although with more monstrous features such as fangs and claws, their skin is red and its many shades, and they have a set of wings, allowing them to fly. Their lifespans are on the other hand, shorter than those of humans.");
+
+    Demon.SetFeatures({Perks::DemonicWings, Perks::SoulFeeding, Perks::NightVision, Perks::FleshDiet});
+    //Constructs init
+    Constructs.SetDescription("Constructs are intelligent machines, often considered expensive works of industry, or art. Their original function was to explore the abyss, but as many of them were corrupted by it, it was decided to allocate them to other areas and jobs. Most of them are infused with magic and many are known to gain sentience and sapience, obtaining their own free will.");
+    Constructs.SetAppearance("Constructs have different forms and shapes according to their design and function, as well as the materials used to make them, but many are created with a humanoid form.");
+
+    Constructs.SetFeatures({Perks::AdaptiveSystems, Perks::ModularBody, Perks::ArtificialMetabolism});
+    //Chlorfolk init
+    Chlorfolk.SetDescription("The Chlorfolk are visitors from an empire composed of many worlds, far away from Talios, they are a thriving peaceful society with a long history. They are known for getting bored quickly, in consequence they built a nomadic society that values exploration, curiosity and entertainment. Mapping out the reaches of space during their travels and making memories as they go. However, the nature of Talios trapped every scout that came, making them unable to leave and report back to their empire and leaving the stranded Chlorfolk feeling isolated, however others are seeking a way to continue their journeys through space.");
+    Chlorfolk.SetAppearance("Chlorfolk are a species of plant like creatures, they feed on sunlight, water and different types of dirt, they don't have mouths but can communicate telepathically and and the colours and appearance of their bodies vary depending on the environment where they grew, they reproduce asexually by laying seeds on the ground, and despite their inability to mate with humans, they certainly can have romantic relationships with them, and in comparison to humans, they can live up to five hundred years.");
+
+    Chlorfolk.SetFeatures({Perks::VegetalRejuvination, Perks::Telepathy, Perks::Photosynthesis});
+    //Voidtouched init
+    Voidtouched.SetDescription("After Earth destruction by the Jester, the small percentage of creatures that survived were transported to a complex dimension of reality were they were trapped for thousands of years until they finally broke free, some of these creatures were once humans who morphed into horrible creatures and many of them gone insane with their minds warped and transformed.");
+    Voidtouched.SetAppearance("With their forms twisted, they grew claws, sometimes otherworldly features and their magical affinity was vastly improved by their time in the void, developing psychic abilities and other mind warping skills. It is rumored that their lifespans are infinite, at least until they are destroyed, but it is also known that there aren't many of them around, as there are only fiftyseven humanoid Voidtouched.");
+
+    Voidtouched.SetFeatures({Perks::WarpedMind, Perks::Telepathy, Perks::VoidNature, Perks::NaturalWeapons});
+    
     return initializedRaces;
 }
 
