@@ -22,7 +22,6 @@ Perk Perks::MagicalInitiation = Perk("Magical Initiation", "You know 2 cantrips 
 std::list<Perk> Perks::Horns = {MindHorns, SoulHorns, CryoHorns, AquaHorns, FlameHorns, EarthHorns, ThunderHorns};
 Perk Perks::ArcaneEducation = Perk("Arcane Education", "You start with proficiency in the Occult skill.");
 //nyx perks
-Perk Perks::NightVision = Perk("Night Vision", "You are able to see in the darkness up to 10 meters, seeing things in shades of gray instead of colors.");
 Perk Perks::RitualOfFlesh = Perk("Ritual Of Flesh", "You are able to perform a ritual using a corpse, once the ritual is complete, you earn HP and Sanity equal to your class level, you can only do this once per short rest.");
 Perk Perks::RitualOfEmpowerment = Perk("Ritual Of Empowerment", "You can sacrifice half of your HP in a ritual to augment some of your powers, granting you +5 to spell attack and damage rolls. This effect lasts up to 1 hour.");
 Perk Perks::UncaringNature = Perk("Uncaring Nature", "Any reduction to your sanity is reduced by half.");
@@ -34,3 +33,25 @@ Perk Perks::LuckyCharm = Perk("Lucky Charm", "You magically obtain a free luck c
 //lites perks
 Perk Perks::SmallButTough = Perk("Small But Tough", "You obtain +1 to your Body and +2 to Reflexes.");
 Perk Perks::SizeNimbleness = Perk("Size Nimbleness", "Your speed is increased by +10 and you are able to occupy the same space as another character as well as moving through them.");
+//Mockrc perks
+Perk Perks::MockrcAdaptability = Perk("Mockrc Adaptability", "You are able to allocate +2 to any Stat of your choice, and +2 to another Stat.");
+Perk Perks::ShapeshiftingProwess = Perk("Shapeshifting Prowess", "You are able to shapeshift your body to take the appearance of any humanoid person you previously saw, as well as taking the shape of any object that resembles your size.");
+Perk Perks::FleshWeaponry = Perk("Flesh Weaponry", "You are able to morph your limbs to become improvised weapons such as swords or claws. Having the ability to dual wield if necessary.");
+//Demon Perks
+Perk Perks::DemonicWings = Perk("Demonic Wings", "You are able to fly, up to your Speed.");
+Perk Perks::SoulFeeding = Perk("Soul Feeding", "You are able to drain the vitality of other beings by touching them, this causes 2d6 damage and you heal the amount of damage done, you can do that twice per long rest as well costs 2 action points.");
+Perk Perks::FleshDiet = Perk("Flesh Diet", "You can only consume flesh and meat.");
+//Construct perks
+Perk Perks::AdaptiveSystems = Perk("Adaptive Systems", "Your internal mechanisms adjust to resist the effects of spells and abilities used against you. After taking damage from a specific damage type, you gain resistance to that type until the end of your next turn.");
+Perk Perks::ModularBody = Perk("Modular Body", "Your mechanical nature allows you to be fitted with upgrades obtained during your adventures that can give you new abilities and perks.");
+Perk Perks::ArtificialMetabolism = Perk("Artificial Metabolism", "You don't need to eat, or sleep, but you will require a new power cell each long rest to keep functioning.");
+//Chlorfolk perks
+Perk Perks::VegetalRejuvination = Perk("Vegetal Rejuvination", "As long as you stay under sunlight for at least 4 hours, you can recover HP equal to half your max HP.");
+Perk Perks::Photosynthesis = Perk("Photosynthesis", "You can't consume vegetables or meat, instead you need direct exposure to sunlight and water in order to feed, each hour under sunlight and each time you are hydrated you fill 5 Hunger.");
+//Voidtouched
+Perk Perks::WarpedMind = Perk("Warped Mind", "You are able to learn Mind spells easily, taking only half the time required to learn them, and you start knowing 1 cantrip and 2 Spells of rank 1 to 2 of Mind magic.");
+Perk Perks::VoidNature = Perk("Void Nature", "You don't age, but you can die, you also don't require food or drink and don't suffer penalties for not sleeping.");
+Perk Perks::NaturalWeapons = Perk("Natural Weapons", "Your unarmed attacks deal 2d6 more damage and the damage can be slashing or piercing.");
+
+//Misc perks
+Perk Perks::NightVision = Perk("Night Vision", "You are able to see in the darkness up to 10 meters, seeing things in shades of gray instead of colors.");

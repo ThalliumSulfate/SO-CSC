@@ -25,7 +25,6 @@ class Perks
         static Perk MagicalInitiation;
         static Perk ArcaneEducation;
         //nyx perks
-        static Perk NightVision;
         static Perk RitualOfFlesh;
         static Perk RitualOfEmpowerment;
         static Perk UncaringNature;
@@ -37,4 +36,27 @@ class Perks
         //lites perks
         static Perk SmallButTough;
         static Perk SizeNimbleness;
+        //Mockrc perks
+        static Perk MockrcAdaptability;
+        static Perk ShapeshiftingProwess;
+        static Perk FleshWeaponry;
+        //Demon perks
+        static Perk DemonicWings;
+        static Perk SoulFeeding;
+        static Perk FleshDiet;
+        //Construct perks
+        static Perk AdaptiveSystems;
+        static Perk ModularBody;
+        static Perk ArtificialMetabolism;
+        //Chlorfolk perks
+        static Perk VegetalRejuvination;
+        static Perk Photosynthesis;
+        //Voidtouched perks
+        static Perk WarpedMind;
+        static Perk VoidNature;
+        static Perk NaturalWeapons;
+
+        //Misc perks
+        static Perk NightVision;
+        static Perk Telepathy;
 };
