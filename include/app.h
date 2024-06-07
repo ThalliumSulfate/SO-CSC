@@ -19,7 +19,7 @@ class App
         Race aRace;
 
         std::list<Race>::iterator it;
-        std::list<Race> Races;
+        std::list<Race> aRaces;
 
         Character aCharacter;
 };

@@ -58,7 +58,7 @@ std::list<Race> Races::InitRaces()
     return initializedRaces;
 }
 
-void Races::SelectHorns(Race &magin)
+void Races::SelectHorns(Race& magin)
 {
     std::list<Perk> Features = magin.GetFeatures();
     std::list<Perk>::iterator itp = Features.begin();
@@ -120,4 +120,5 @@ void Races::SelectHorns(Race &magin)
             }
         }
     }
+    magin.SetFeatures(Features);
 }

@@ -4,7 +4,7 @@
 
 App::App()
 {
-    Races = Races::InitRaces();
+    aRaces = Races::InitRaces();
 }
 
 App::~App()
@@ -47,7 +47,7 @@ Race App::RaceSelect()
 
     Race selected;
 
-    for(it=Races.begin(); it!=Races.end(); it++)
+    for(it=aRaces.begin(); it!=aRaces.end(); it++)
     {
         std::cout << '\n' << i << ". " << (*it).GetName() << '\n';
         std::cout << "Description: \n" << (*it).GetDescription() << '\n';
@@ -74,7 +74,7 @@ Race App::RaceSelect()
     else
     {
         i = 1;
-        for(it=Races.begin(); it!=Races.end(); it++)
+        for(it=aRaces.begin(); it!=aRaces.end(); it++)
         {
             if(i == selection)
             {
@@ -96,7 +96,7 @@ void App::DisplayPerks(std::list<Perk> list)
     std::list<Perk>::iterator itp;
 
     for(itp = list.begin(); itp!=list.end(); itp++)
-        {
-            std::cout << (*itp).GetName() << ": " << (*itp).GetDescription() << '\n';
-        }
+    {
+        std::cout << (*itp).GetName() << ": " << (*itp).GetDescription() << '\n';
+    }
 }
