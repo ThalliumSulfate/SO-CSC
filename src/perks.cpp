@@ -55,3 +55,4 @@ Perk Perks::NaturalWeapons = Perk("Natural Weapons", "Your unarmed attacks deal 
 
 //Misc perks
 Perk Perks::NightVision = Perk("Night Vision", "You are able to see in the darkness up to 10 meters, seeing things in shades of gray instead of colors.");
+Perk Perks::Telepathy = Perk("Telepathy", "You are able to speak to the minds of other creatures up to 30 ft around yourself.");
