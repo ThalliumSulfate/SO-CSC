@@ -80,6 +80,7 @@ class Perks
         static Perk ElementalAdeptIllusion;
         static Perk ElementalAdeptLuck;
         static Perk ElementalAdeptEnchant;
+        static std::list<Perk> AdeptedTypes;
         static Perk ElementalMastery;
         //Candlefolk perks
         static Perk NaturalPyrokinesis;
