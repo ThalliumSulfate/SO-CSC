@@ -27,7 +27,6 @@ Perk Perks::RitualOfEmpowerment = Perk("Ritual Of Empowerment", "You can sacrifi
 Perk Perks::UncaringNature = Perk("Uncaring Nature", "Any reduction to your sanity is reduced by half.");
 //evelet perks
 Perk Perks::PerksOfPrey = Perk("Perks Of Prey", "Your Perception is increased by +2, your Body by +2 and Reflexes by +1.");
-Perk Perks::PowerfulLegs = Perk("Poweful Legs", "Your speed while running increases by 10, and your jump height increases by 20.");
 Perk Perks::Herbivore = Perk("Herbivore", "You can only consume vegetables, fruits and anything made of flesh sickens you when eaten, and also reduces your sanity by 10.");
 Perk Perks::LuckyCharm = Perk("Lucky Charm", "You magically obtain a free luck coin each long rest.");
 //lites perks
@@ -52,7 +51,42 @@ Perk Perks::Photosynthesis = Perk("Photosynthesis", "You can't consume vegetable
 Perk Perks::WarpedMind = Perk("Warped Mind", "You are able to learn Mind spells easily, taking only half the time required to learn them, and you start knowing 1 cantrip and 2 Spells of rank 1 to 2 of Mind magic.");
 Perk Perks::VoidNature = Perk("Void Nature", "You don't age, but you can die, you also don't require food or drink and don't suffer penalties for not sleeping.");
 Perk Perks::NaturalWeapons = Perk("Natural Weapons", "Your unarmed attacks deal 2d6 more damage and the damage can be slashing or piercing.");
+//Horriblius perks
+Perk Perks::HorriblePresence = Perk("Horrible Presence", "As a Horriblius, you always gain advantage on any Intimidation rolls and you can also use the Fear ability naturally.");
+Perk Perks::FeralNature = Perk("Feral Nature", "You gain +2 to Body and proficiency in Survival.");
+Perk Perks::NaturalArmor = Perk("Natural Armor", "You gain a permanent 2 AR that is never reduced.");
+//Cuti perks
+Perk Perks::AdorablePresence = Perk("Adorable Presence", "As a Cuti, you can use the Charm ability naturally, and also have a permanent advantage in Persuasion rolls.");
+Perk Perks::CuteLooks = Perk("Cute Looks", "You gain +3 to Charisma.");
+//Satyr perks
+Perk Perks::AbyssDefence = Perk("Abyss Defense", "Due to the effects of being constantly exposed to the abyss, you obtain natural resistance to Magical damage. You also gain +2 Reflex and +1 Body");
+//Titan perks
+Perk Perks::PowerfulBuild = Perk("Powerful Build", "Because of your powerful body, whenever your HP would reach 0, it instead stays at 1 HP, once per Long rest, you also have +3 in Body and +3 Natural AR.");
+//Arakin perks
+Perk Perks::ElementalAdept = Perk("Elemental Adept", "Pick an magic element depending on your element you gain an elemental feature of your choice");
+Perk Perks::ElementalAdeptAqua = Perk("Elemental Adept(Aqua)", "You may move through water without hindrance as well you gain a swimming speed equal to your movement speed. You gain the ability to breathe underwater. Additionally whenever healing you gain 3d6.");
+Perk Perks::ElementalAdeptMind = Perk("Elemental Adept(Mind)", "You gain the ability to speak telepathically with a range of 60ft.Additionally you gain proficiency in three intellect related skills");
+Perk Perks::ElementalAdeptFlame = Perk("Elemental Adept(Flame)", "Whenever casting a fire spell or cantrip you gain double the damage die. You can easily survive in hot environments as well.");
+Perk Perks::ElementalAdeptCryo = Perk("Elemental Adept(Cryo)", "You gain resistance to cold damage and can easily survive in cold environments");
+Perk Perks::ElementalAdeptSoul = Perk("Elemental Adept(Soul)", "once per short rest you may teleport up to 60ft \nOnce per short rest you may speak with the spirit of a corpse additionally you gain advantage on all checks against the spirit.");
+Perk Perks::ElementalAdeptThunder = Perk("Elemental Adept(Thunder)", "You gain advantage and resistance to being stunned or paralysis. Additionally when hit by a thunder or lighting damage it heals you instead of dealing damage.");
+Perk Perks::ElementalAdeptEarth = Perk("Elemental Adept(Earth)", "You gain a DEF of 2 that can never be reduced. \nAdditionally you gain the ability to borrow and dig your movement speed however you have to appear on ground after the end of your turn. If attacking someone after borrowing you deal an extra damage die.");
+Perk Perks::ElementalAdeptAir = Perk("Elemental Adept(Air)", "You gain a flying speed up to your movement speed you as well gain a bonus to your movement speed of 10ft.");
+Perk Perks::ElementalAdeptShadow = Perk("Elemental Adept(Shadow)", "You gain advantage on stealth checks in dim or darkness as well. Additionally you may see through darkness as if it was shades of gray.");
+Perk Perks::ElementalAdeptLight = Perk("Elemental Adept(Light)", "Any sanity Regenerations for you and any ally is regained by double. Additionally you may choose to glow that even pierces magical darkness up to 30ft.");
+Perk Perks::ElementalAdeptIllusion = Perk("Elemental Adept(Illusion)", "You gain resistance to non-magical bludgeoning, piercing, and slashing damage. Additionally, once per short rest, you can turn invisible for 1 minute for the cost of 5 action points.");
+Perk Perks::ElementalAdeptLuck = Perk("Elemental Adept(Luck)", "Any luck coins you have from your luck stat are doubled. Additionally when making an attack roll or ability roll you may roll another d20 and add it to the roll. You may use this feature 4 times per long rest");
+Perk Perks::ElementalAdeptEnchant = Perk("Elemental Adept(Enchant)", "You may permanently enchant a weapon to give it a plus 2 to attack and damage rolls. \nAdditionally whenever you enchant something its effects are doubled.");
+Perk Perks::ElementalMastery = Perk("Elemental Mastery", "When casting spells you gain the ability to change the spell type to your adepted spell type, this also changes the damage type to whatever spell type it is. Turning a powerful scorching orb to a ball of hot water or a hard rock.");
+//Candlefolk perks
+Perk Perks::NaturalPyrokinesis = Perk("Natural Pyrokinesis", "Your flaming body allows you to gain immunity to fire damage and a +3 to fire damage with each of your unarmed attacks or fire spells.");
+Perk Perks::EternalFlame = Perk("Eternal Flame", "You may choose to glow light up to 30 ft.");
+//Gorilla perks
+Perk Perks::StrongBody = Perk("Strong Body", "You gain plus 3 to body ");
+Perk Perks::PrimalStrength = Perk("Primal Strength", "You have proficiency in Fitness. Additionally, you can use your Body modifier for Acrobatics checks instead of Reflexes.");
+Perk Perks::GorillaEndurance = Perk("Gorilla Endurance", "Your hit point maximum increases by 2 for each level you have.");
 
 //Misc perks
 Perk Perks::NightVision = Perk("Night Vision", "You are able to see in the darkness up to 10 meters, seeing things in shades of gray instead of colors.");
+Perk Perks::PowerfulLegs = Perk("Poweful Legs", "Your speed while running increases by 10, and your jump height increases by 20.");
 Perk Perks::Telepathy = Perk("Telepathy", "You are able to speak to the minds of other creatures up to 30 ft around yourself.");

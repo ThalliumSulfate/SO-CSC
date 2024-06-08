@@ -30,7 +30,6 @@ class Perks
         static Perk UncaringNature;
         //evelet perks
         static Perk PerksOfPrey;
-        static Perk PowerfulLegs;
         static Perk Herbivore;
         static Perk LuckyCharm;
         //lites perks
@@ -55,8 +54,43 @@ class Perks
         static Perk WarpedMind;
         static Perk VoidNature;
         static Perk NaturalWeapons;
+        //Horriblius perks
+        static Perk HorriblePresence;
+        static Perk FeralNature;
+        static Perk NaturalArmor;
+        //Cuti perks
+        static Perk AdorablePresence;
+        static Perk CuteLooks;
+        //Satyr perks
+        static Perk AbyssDefence;
+        //Titan perks
+        static Perk PowerfulBuild;
+        //Arakin perks
+        static Perk ElementalAdept;
+        static Perk ElementalAdeptAqua;
+        static Perk ElementalAdeptMind;
+        static Perk ElementalAdeptFlame;
+        static Perk ElementalAdeptCryo;
+        static Perk ElementalAdeptSoul;
+        static Perk ElementalAdeptThunder;
+        static Perk ElementalAdeptEarth;
+        static Perk ElementalAdeptAir;
+        static Perk ElementalAdeptShadow;
+        static Perk ElementalAdeptLight;
+        static Perk ElementalAdeptIllusion;
+        static Perk ElementalAdeptLuck;
+        static Perk ElementalAdeptEnchant;
+        static Perk ElementalMastery;
+        //Candlefolk perks
+        static Perk NaturalPyrokinesis;
+        static Perk EternalFlame;
+        //Gorilla perks
+        static Perk StrongBody;
+        static Perk PrimalStrength;
+        static Perk GorillaEndurance;
 
         //Misc perks
         static Perk NightVision;
+        static Perk PowerfulLegs;
         static Perk Telepathy;
 };
