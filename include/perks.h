@@ -4,8 +4,8 @@ class Perks
 {
     public:
         //human perks
-        static Perk Adaptability;
-        static Perk JackOfAllTrades;
+        static Perk HumanAdaptability;
+        static Perk HumanDetermination;
         //fae perks
         static Perk ShadowBlink;
         static Perk FaeFortune;
@@ -29,19 +29,20 @@ class Perks
         static Perk RitualOfEmpowerment;
         static Perk UncaringNature;
         //evelet perks
+        static Perk PowerfulJumping;
         static Perk PerksOfPrey;
         static Perk Herbivore;
         static Perk LuckyCharm;
         //lites perks
-        static Perk SmallButTough;
         static Perk SizeNimbleness;
+        static Perk SmallButQuick;
         //Mockrc perks
-        static Perk MockrcAdaptability;
         static Perk ShapeshiftingProwess;
+        static Perk MorphicAdaptability;
         static Perk FleshWeaponry;
         //Demon perks
-        static Perk DemonicWings;
         static Perk SoulFeeding;
+        static Perk DemonicWings;
         static Perk FleshDiet;
         //Construct perks
         static Perk AdaptiveSystems;
@@ -51,19 +52,22 @@ class Perks
         static Perk VegetalRejuvination;
         static Perk Photosynthesis;
         //Voidtouched perks
+        static Perk VoidPower;
         static Perk WarpedMind;
         static Perk VoidNature;
-        static Perk NaturalWeapons;
         //Horriblius perks
         static Perk HorriblePresence;
         static Perk FeralNature;
-        static Perk NaturalArmor;
+        static Perk TerrorificAppearance;
         //Cuti perks
+        static Perk JustAdorable;
         static Perk AdorablePresence;
         static Perk CuteLooks;
         //Satyr perks
+        static Perk AbyssWalking;
         static Perk AbyssDefence;
         //Titan perks
+        static Perk ToweringForce;
         static Perk PowerfulBuild;
         //Arakin perks
         static Perk ElementalAdept;
@@ -81,17 +85,20 @@ class Perks
         static Perk ElementalAdeptLuck;
         static Perk ElementalAdeptEnchant;
         static std::list<Perk> AdeptedTypes;
-        static Perk ElementalMastery;
+        static Perk ElementalSpecialist;
         //Candlefolk perks
-        static Perk NaturalPyrokinesis;
         static Perk EternalFlame;
-        //Gorilla perks
-        static Perk StrongBody;
+        static Perk NaturalPyrokinesis;
+        static Perk LivingLightSource;
+        //Gorkin perks
+        static Perk ApeStrong;
         static Perk PrimalStrength;
-        static Perk GorillaEndurance;
+        static Perk ApeEndurance;
 
         //Misc perks
         static Perk NightVision;
         static Perk PowerfulLegs;
         static Perk Telepathy;
+
+        static void InitStats();
 };

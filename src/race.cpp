@@ -30,6 +30,11 @@ std::string Race::GetSize()
     return Size;
 }
 
+void Race::SetSize(std::string size)
+{
+    Size = size;
+}
+
 std::string Race::GetType()
 {
     return Type;

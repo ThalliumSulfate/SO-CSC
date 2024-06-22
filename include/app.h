@@ -12,8 +12,10 @@ class App
 
         void Program();
         Race RaceSelect();
+        void SizeSelect(Race &race);
+
         void DisplayPerks(std::list<Perk> list);
-        bool IsMagin(const Race* race);
+        void DisplayCharacter(Character character);
     private:
         std::string Name;
         Race aRace;

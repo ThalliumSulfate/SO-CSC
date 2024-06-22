@@ -16,6 +16,7 @@ class Race
         int GetSpeed();
 
         std::string GetSize();
+        void SetSize(std::string size);
         std::string GetType();
 
         std::list<Perk> GetFeatures();

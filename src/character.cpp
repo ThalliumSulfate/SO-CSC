@@ -2,14 +2,28 @@
 
 Character::Character(){}
 
-Character::Character(std::string name, Race race)
-{
-    Name = name;
-    cRace = race;
-}
-
 Character::~Character()
 {
     Name.clear();
     cRace.~Race();
+}
+
+std::string Character::GetName()
+{
+    return Name;
+}
+
+void Character::SetName(std::string name)
+{
+    Name = name;
+}
+
+Race Character::GetRace()
+{
+    return cRace;
+}
+
+void Character::SetRace(Race race)
+{
+    cRace = race;
 }
