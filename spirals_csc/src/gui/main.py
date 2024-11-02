@@ -3,49 +3,68 @@ import sys
 from PyQt6.QtCore import *
 from PyQt6.QtWidgets import *
 
+from spirals_csc.src.data.data_management import hasData
 
-class Window(QWidget):
-    def __init__(self):
-        super().__init__()
-        self.setWindowTitle('Spirals CSC')
-
-    def __call__(self):
-        return self
 
 class App(QApplication):
     def __init__(self):
         super().__init__(sys.argv)
         self.geometry = QApplication.primaryScreen().geometry()
-        self.window = (Window())
+        self.window = (MainWindow(self.geometry))
 
-    def window(self):
-        return self.window
-
-    def UI(self, box):
-        self.window.setLayout(box)
+    def setGeometry(self, geometry):
+        self.geometry = geometry
         self.window.setGeometry(self.geometry)
 
     def run(self):
+        self.window.initUI()
         self.window.show()
 
         self.exec()
 
-def mainUI(isCharacters, app):
-    noCharactersLabel = QLabel(text="No Characters...")
-    noCharactersLabel.setAlignment(Qt.AlignmentFlag.AlignCenter)
-    noCharactersLabel.resize(300, 30)
-    createButton = QPushButton("Create Characters")
-    createButton.resize(300, 300)
+class MainWindow(QWidget):
+    def __init__(self, geometry):
+        super().__init__()
+        self.setGeometry(geometry)
+        self.setWindowTitle('Spirals CSC')
 
-    w1 = QWidget()
-    w2 = QWidget()
-    w3 = QWidget()
+    def initUI(self):
+        box = QGridLayout()
 
-    mainBox = QGridLayout()
-    mainBox.addWidget(w1, 0, 0)
-    mainBox.addWidget(w2, 0, 2)
-    mainBox.addWidget(w3, 2, 0)
-    mainBox.addWidget(noCharactersLabel, 1, 1)
-    mainBox.addWidget(createButton, 3, 1)
+        w1 = QWidget()
 
-    app.UI(mainBox)
+        if not hasData():
+            noCharacters = QLabel("No characters created", self)
+            noCharacters.setAlignment(Qt.AlignmentFlag.AlignCenter)
+            box.addWidget(noCharacters, 1, 1)
+        else:
+            list = QListWidget(parent=self)
+            box.addWidget(list, 1, 1)
+
+        createButton = QPushButton('Create Character', self)
+        createButton.clicked.connect(self.create_character)
+
+        box.addWidget(w1, 2, 0)
+        box.addWidget(w1, 2, 2)
+        box.addWidget(createButton, 2, 1)
+
+        self.setLayout(box)
+        self.show()
+
+
+    def create_character(self):
+        self.widget = CreateWindow(self.geometry())
+        self.close()
+
+class CreateWindow(QWidget):
+    def __init__(self, geometry):
+        super().__init__()
+        self.setWindowTitle('Create Character')
+        self.setGeometry(geometry)
+        self.initUI()
+
+    def initUI(self):
+        box = QGridLayout()
+
+        self.setLayout(box)
+        self.show()
