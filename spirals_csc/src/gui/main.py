@@ -3,7 +3,9 @@ import sys
 from PyQt6.QtCore import *
 from PyQt6.QtWidgets import *
 
-from spirals_csc.src.data.data_management import hasData
+from spirals_csc.src.data.data_management import hasData, characterList
+from spirals_csc.src.modules import character
+from spirals_csc.src.modules.character import Character
 
 
 class App(QApplication):
@@ -30,23 +32,31 @@ class MainWindow(QWidget):
 
     def initUI(self):
         box = QGridLayout()
+        buttonBox = QHBoxLayout()
 
         w1 = QWidget()
+
+        list = QListWidget(parent=self)
+        box.addWidget(list, 1, 1)
 
         if not hasData():
             noCharacters = QLabel("No characters created", self)
             noCharacters.setAlignment(Qt.AlignmentFlag.AlignCenter)
             box.addWidget(noCharacters, 1, 1)
         else:
-            list = QListWidget(parent=self)
-            box.addWidget(list, 1, 1)
+            list.clear()
+            for c in characterList:
+                list.addItem(c.__str__())
 
         createButton = QPushButton('Create Character', self)
         createButton.clicked.connect(self.create_character)
+        createButton.setFixedWidth(150)
 
-        box.addWidget(w1, 2, 0)
-        box.addWidget(w1, 2, 2)
-        box.addWidget(createButton, 2, 1)
+        buttonBox.addWidget(createButton)
+        buttonBox.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        box.addLayout(buttonBox, 2, 1)
+        box.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.setLayout(box)
         self.show()
@@ -64,7 +74,40 @@ class CreateWindow(QWidget):
         self.initUI()
 
     def initUI(self):
-        box = QGridLayout()
+        def set():
+            self.character = Character(name=name.text())
+            self.submit()
+
+        box = QVBoxLayout()
+        buttonBox = QHBoxLayout()
+
+        save = QPushButton('Save', self)
+        save.clicked.connect(set)
+        save.setFixedWidth(60)
+        buttonBox.addWidget(save)
+        buttonBox.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        nameBox = QHBoxLayout()
+        nameLabel = QLabel('Name:', self)
+        nameLabel.setFixedWidth(50)
+        name = QLineEdit(parent=self)
+        name.setFixedWidth(450)
+
+        nameBox.addWidget(nameLabel)
+        nameBox.addWidget(name)
+        nameBox.setAlignment(Qt.AlignmentFlag.AlignLeft)
+
+        box.addLayout(nameBox)
+        box.addLayout(buttonBox)
+        box.setAlignment(Qt.AlignmentFlag.AlignHCenter)
+        box.setAlignment(Qt.AlignmentFlag.AlignTop)
+
 
         self.setLayout(box)
         self.show()
+
+    def submit(self):
+        characterList.append(character)
+        self.widget = MainWindow(self.geometry())
+        self.widget.initUI()
+        self.close()
