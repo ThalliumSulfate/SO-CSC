@@ -3,9 +3,9 @@ import sys
 from PyQt6.QtCore import *
 from PyQt6.QtWidgets import *
 
-from spirals_csc.src.data.data_management import hasData, characterList
-from spirals_csc.src.modules import character
-from spirals_csc.src.modules.character import Character
+from src.data.data_management import characterList, hasData, ancestryList
+from src.modules import character
+from src.modules.character import Character
 
 
 class App(QApplication):
@@ -31,7 +31,7 @@ class MainWindow(QWidget):
         self.setWindowTitle('Spirals CSC')
 
     def initUI(self):
-        box = QGridLayout()
+        box = QGridLayout(self)
         buttonBox = QHBoxLayout()
 
         w1 = QWidget()
@@ -69,14 +69,19 @@ class MainWindow(QWidget):
 class CreateWindow(QWidget):
     def __init__(self, geometry):
         super().__init__()
+        self.ancestry = None
         self.setWindowTitle('Create Character')
         self.setGeometry(geometry)
         self.initUI()
 
     def initUI(self):
         def set():
-            self.character = Character(name=name.text())
+            self.character = Character(name=name.text(), ancestry=self.ancestry)
             self.submit()
+        def on_clicked(item):
+            text = item.text().split(':')
+            print(text[0])
+            self.ancestry = text[0]
 
         box = QVBoxLayout()
         buttonBox = QHBoxLayout()
@@ -93,11 +98,19 @@ class CreateWindow(QWidget):
         name = QLineEdit(parent=self)
         name.setFixedWidth(450)
 
+        list = QListWidget(parent=self)
+
+        for a in ancestryList:
+            list.addItem(a.__str__())
+
+        list.itemClicked.connect(on_clicked)
+
         nameBox.addWidget(nameLabel)
         nameBox.addWidget(name)
         nameBox.setAlignment(Qt.AlignmentFlag.AlignLeft)
 
         box.addLayout(nameBox)
+        box.addWidget(list)
         box.addLayout(buttonBox)
         box.setAlignment(Qt.AlignmentFlag.AlignHCenter)
         box.setAlignment(Qt.AlignmentFlag.AlignTop)
