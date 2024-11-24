@@ -1,3 +1,3 @@
 # Spiraling Odessy: Character Sheet Creator(WIP)
 
-Currently a none functional GUI
+Currently a non functional GUI
