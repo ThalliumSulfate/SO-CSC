@@ -1,0 +1,5 @@
+name: Human
+natAbilities:
+  - Human_Determination
+perkAbilities:
+  - Human_Adaptability
