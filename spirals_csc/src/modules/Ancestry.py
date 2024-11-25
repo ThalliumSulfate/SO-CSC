@@ -1,8 +1,6 @@
-import os
-from path import filePath
 from typing import List
-
 from datafiles import datafile
+from path import filePath
 
 naturalAbilityList = []
 perkAbilityList = []

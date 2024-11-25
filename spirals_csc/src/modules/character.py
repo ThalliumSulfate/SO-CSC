@@ -1,6 +1,7 @@
 import os
-from path import appPath
 from datafiles import datafile
+
+from path import appPath
 
 newPath = appPath + '/characters'
 

@@ -1,6 +1,6 @@
-import os
-from path import filePath
 from datafiles import datafile
+
+from path import filePath
 
 newPath = filePath + '/data/abilities'
 

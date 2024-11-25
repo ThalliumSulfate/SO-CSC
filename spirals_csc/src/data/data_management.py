@@ -1,8 +1,8 @@
 import os
 from os import walk
 from datafiles import Missing
-
 from path import filePath, appPath
+
 from src.modules.Ability import Ability
 from src.modules.Ancestry import Ancestry, naturalAbilityList, perkAbilityList
 from src.modules.character import Character
@@ -36,7 +36,6 @@ def loadConstantData():
 
 def hasData():
     data = False
-    print(filePath)
     dPath = appPath + '/characters/'
 
     if not os.path.isdir(dPath):

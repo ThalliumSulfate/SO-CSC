@@ -1,5 +1,5 @@
 import os
-import sys
+from sys import executable
 
 filePath = os.path.join(os.path.dirname(__file__))
-appPath = os.path.join(os.path.dirname(sys.argv[0]))
+appPath = os.path.join(os.path.dirname(executable))
